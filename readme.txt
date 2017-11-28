@@ -52,4 +52,6 @@ I tried running this a bunch of times to see if I could get any interesting sent
 - Let me take it on any terms other than marriage?
 - My dearest Lizzy will, I dare say Kitty is forwarder than either of those?
 
-Final thoughts: most of the generated sentences sounded like giberish. I think a big reason for this was that the probabilities used to generate these only took into account likelihood based on the past few words. If the generated sentences were then compared to the likelihood of it being an English sentence, these might yield better results.
+Most of the generated sentences sounded like giberish. I think a big reason for this was that the probabilities used to generate these only took into account likelihood based on the past few words. If the generated sentences were then compared to the likelihood of it being an English sentence, these might yield better results.
+
+I then tried combining this with the screenplay of "Star Wars Episode 4"

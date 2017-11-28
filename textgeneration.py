@@ -1,20 +1,18 @@
 import markovify
 
-# Get raw text as string.
+# Get raw text 
 with open("pride-prejudice-edited.txt") as f:
-    text = f.read()
+    pride_prejudice_text = f.read()
+with open("starwars4.txt") as f:
+    star_wars_4_text = f.read()
 
-# Build the model.
-text_model = markovify.Text(text)
+# Build the models
+pride_prejudice_text_model = markovify.Text(pride_prejudice_text)
+star_wars_4_text_model = markovify.Text(star_wars_4_text)
 
-# Print five randomly-generated sentences
-for i in range(5):
-    print(text_model.make_sentence())
+# Combine them!
+combined_text_model = markovify.combine([ pride_prejudice_text_model, star_wars_4_text_model ], [ 1, 1 ])
 
-# Print five randomly-generated sentences of no more than 100 characters
-for i in range(5):
-    print(text_model.make_short_sentence(100))
-
-# Print out a bunch of random sentences
-for i in range(50):
-    print(text_model.make_short_sentence(100))
+for i in range(10):
+    print(combined_text_model.make_short_sentence(120))
+    print("")
