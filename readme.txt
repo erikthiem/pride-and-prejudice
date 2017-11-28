@@ -46,8 +46,10 @@ and these 3 "short" sentences:
 Some observations here:
 - All of the generated sentences end in periods. This makes sense, as the training data is theoretically gramatically correct and thus all of its sentences end in periods. This is a fairly formal source text (compared to texts, Facebook posts, etc.).
 - The quotation marks feel out of place. And they are, as these sentences are generated without consideration for meaning. `and said: "Jane...`, however, does use a quotation mark correctly, which is pretty cool. Also, opening and closing quotation marks are not aligned consistently.
- 
-Markovify seems to use a "state size" of 3 by default. I'm pretty sure that this means that the source text is broken into triples, so the sentence "I am going to the park" would be broken into [("I", "am", "going"), ("am", "going", "to"), ("going", "to", "the"), ("to", "the", "park")]. I'm going to try this again with setting the state size to a higher value. This _should_ generate sentences with more meaning.
 
-With a state size of 6:
+I tried running this a bunch of times to see if I could get any interesting sentence results. Here were the top 3:
+- I _will_ leave him to be ashamed of you!
+- Let me take it on any terms other than marriage?
+- My dearest Lizzy will, I dare say Kitty is forwarder than either of those?
 
+Final thoughts: most of the generated sentences sounded like giberish. I think a big reason for this was that the probabilities used to generate these only took into account likelihood based on the past few words. If the generated sentences were then compared to the likelihood of it being an English sentence, these might yield better results.
